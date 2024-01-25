@@ -6,8 +6,8 @@ on:
     branches: [ main, master ]
 
 env:
-  USERNAME: ${{ secrets.USERNAME }}
-  PASSWORD: ${{ secrets.PASSWORD }}
+  TEST_USERNAME: ${{ secrets.TEST_USERNAME }}
+  TEST_PASSWORD: ${{ secrets.TEST_PASSWORD }}
   USERID: ${{ secrets.USERID }}
   SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
   USERNAME_ADMIN: ${{ secrets.USERNAME_ADMIN }}

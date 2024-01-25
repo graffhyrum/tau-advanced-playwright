@@ -3,8 +3,8 @@ import LoginPage from '../pages/login-page';
 import pages from '../../utils/pages';
 import userData from '../../data/user-data';
 
-const userName = process.env.USERNAME!;
-const password = process.env.PASSWORD!;
+const userName = process.env.TEST_USERNAME!;
+const password = process.env.TEST_PASSWORD!;
 let loginPage: LoginPage;
 
 test.use({ storageState: { cookies: [], origins: [] } }); // doesn't share the logged in session

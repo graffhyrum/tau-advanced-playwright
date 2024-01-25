@@ -8,9 +8,9 @@ test.describe.configure({ mode: 'serial' });
 
 let apiContext: APIRequestContext;
 const env = process.env.ENV!;
-const password = process.env.PASSWORD!;
+const password = process.env.TEST_PASSWORD!;
 const userId = process.env.USERID!;
-const userName = process.env.USERNAME!;
+const userName = process.env.TEST_USERNAME!;
 
 test.beforeAll(async ({ playwright }) => {
     // apiContext = await playwright.request.newContext({ storageState: 'storageState.json' });

@@ -9,9 +9,9 @@ import pages from '../../utils/pages';
 import userData from '../../data/user-data';
 
 const env = process.env.ENV!;
-const password = process.env.PASSWORD!;
+const password = process.env.TEST_PASSWORD!;
 const userId = process.env.USERID!;
-const userName = process.env.USERNAME!;
+const userName = process.env.TEST_USERNAME!;
 
 let apiContext: APIRequestContext;
 let loginPage: LoginPage;
