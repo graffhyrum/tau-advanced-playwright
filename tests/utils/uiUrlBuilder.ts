@@ -1,6 +1,6 @@
 import uiPages from '../utils/uiPages';
 
-export function buildUrl(page: string, params?: Record<any, any>) {
+export function buildUrl(page: string, params?: Record<string, string>) {
   const uiPath = uiPages[page];
     
   const qParams = new URLSearchParams(params);

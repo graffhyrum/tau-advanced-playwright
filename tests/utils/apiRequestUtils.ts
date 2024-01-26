@@ -1,15 +1,16 @@
 import { APIRequestContext } from '@playwright/test';
+import apiMethods from "./apiMethods";
 
 export async function executeRequest(
   apiContext: APIRequestContext,
   requestUrl: string,
-  method: string,
+  method: keyof typeof apiMethods & keyof APIRequestContext,
   requestOptions: object
 ) {
   try {
     const response = await apiContext[method](requestUrl, requestOptions);
-    const responseCode = await response.status();
-    const responseOk = await response.ok();
+    const responseCode = response.status();
+    const responseOk = response.ok();
 
     if (!responseOk) {
     // if (responseCode !== 200) {

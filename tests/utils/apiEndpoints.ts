@@ -7,4 +7,4 @@ export default {
   account: {
     get: 'api.account/get',
   }
-};
+} as const;

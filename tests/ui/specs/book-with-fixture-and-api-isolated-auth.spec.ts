@@ -7,11 +7,11 @@ import deleteBookAPIRequest from '../../api/requests/delete-books-collection';
 import hooks from '../../utils/hooks';
 import pages from '../../utils/pages';
 import userData from '../../data/user-data';
+import envHandler from "../../utils/environmentHandler";
 
 const env = process.env.ENV!;
-const password = process.env.TEST_PASSWORD!;
+const {userName, password} = envHandler().getMainUser()
 const userId = process.env.USERID!;
-const userName = process.env.TEST_USERNAME!;
 
 let apiContext: APIRequestContext;
 let loginPage: LoginPage;

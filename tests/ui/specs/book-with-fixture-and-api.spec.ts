@@ -3,14 +3,14 @@ import { APIRequestContext, Page } from '@playwright/test';
 import baseAPIUrl from '../../utils/environmentBaseUrl';
 import deleteBookAPIRequest from '../../api/requests/delete-books-collection';
 import userData from '../../data/user-data';
+import envHandler from "../../utils/environmentHandler";
 
 test.describe.configure({ mode: 'serial' });
 
 let apiContext: APIRequestContext;
 const env = process.env.ENV!;
-const password = process.env.TEST_PASSWORD!;
+const {userName, password} = envHandler().getMainUser()
 const userId = process.env.USERID!;
-const userName = process.env.TEST_USERNAME!;
 
 test.beforeAll(async ({ playwright }) => {
     // apiContext = await playwright.request.newContext({ storageState: 'storageState.json' });

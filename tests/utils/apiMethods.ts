@@ -3,4 +3,4 @@ export default {
   get: 'get',
   post: 'post',
   put: 'put',
-};
+} as const;

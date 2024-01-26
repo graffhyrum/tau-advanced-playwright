@@ -2,10 +2,10 @@ import { test } from '@playwright/test';
 import LoginPage from '../pages/login-page';
 import pages from '../../utils/pages';
 import userData from '../../data/user-data';
+import envHandler from "../../utils/environmentHandler";
 
-const userName = process.env.TEST_USERNAME!;
-const password = process.env.TEST_PASSWORD!;
 let loginPage: LoginPage;
+const {userName, password} = envHandler().getMainUser();
 
 test.use({ storageState: { cookies: [], origins: [] } }); // doesn't share the logged in session
 // test.use({ storageState: undefined }); // https://github.com/microsoft/playwright/issues/17396
